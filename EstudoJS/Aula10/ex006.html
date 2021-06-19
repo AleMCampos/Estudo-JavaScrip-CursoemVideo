@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+div#area {
+    fonte:normal 20pt arial;
+    background: green;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <!--Código para fazer pelo javascrip
+    <div id="area" onclick=" Clicar()" onmouseenter= "Entrar()" onmouseout="Sair()">
+        Interaja....
+    </div>
+    -->
+    <div id="area">
+        Interaja..
+
+    </div>
+
+    <script>
+    /* Modo para fazer pelo geito de HTML
+        var a = window.document.getElementById('area')   
+        a.addEventListener('click', Clicar)
+        a.addEventListener('mouseenter', Entrar)
+        a.addEventListener('mouseout', Sair)
+        */
+
+        var a = window.document.getElementById('area')   
+        a.addEventListener('click', Clicar)
+        a.addEventListener('mouseenter', Entrar)
+        a.addEventListener('mouseout', Sair)
+
+
+        function Clicar() {
+         a.innerText = 'Clicou!'
+         a.style.background = 'red'
+        }
+        function Entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'green'
+        }
+        function Sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'blue'
+        }
+    </script>
+</body>
+</html>
